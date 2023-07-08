@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="19" height="20" viewBox="0 0 19 20">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_14">
+      <rect width="19" height="20"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_14" data-name="Icono_de_biblioteca___14" clip-path="url(#clip-Icono_de_biblioteca_14)">
+    <path id="Icon_map-school" data-name="Icon map-school" d="M12.724,3.541v13.3H3.052V3.541h9.672m1.612-1.612H1.44V18.856h12.9V1.929ZM4.261,5.153h7.254V6.765H4.261Zm0,2.821h7.254V9.586H4.261Zm0,2.821h7.254v1.612H4.261Zm0,2.821h7.254v1.612H4.261ZM16.754,5.153h3.224V16.438H16.754ZM18.369.72a1.606,1.606,0,0,0-1.614,1.587V3.944h3.224V2.307A1.6,1.6,0,0,0,18.369.72ZM16.73,17.647l1.629,2.574,1.621-2.574Z" transform="translate(-1.44 -0.721)" fill="#233775"/>
+  </g>
+</svg>

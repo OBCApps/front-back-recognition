@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_8">
+      <rect width="30" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_8" data-name="Icono_de_biblioteca___8" clip-path="url(#clip-Icono_de_biblioteca_8)">
+    <g id="Icon" transform="translate(-243.124 -1002.992)">
+      <path id="Icon_ionic-ios-search" data-name="Icon ionic-ios-search" d="M33.5,31.72l-8.161-8.238a11.63,11.63,0,1,0-1.765,1.788l8.108,8.184a1.256,1.256,0,0,0,1.773.046A1.264,1.264,0,0,0,33.5,31.72ZM16.2,25.37a9.184,9.184,0,1,1,6.5-2.69A9.127,9.127,0,0,1,16.2,25.37Z" transform="translate(238.624 998.5)"/>
+    </g>
+  </g>
+</svg>

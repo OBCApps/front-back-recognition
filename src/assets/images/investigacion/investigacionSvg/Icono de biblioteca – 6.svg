@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="43" viewBox="0 0 40 43">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_6">
+      <rect width="40" height="43"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_6" data-name="Icono_de_biblioteca___6" clip-path="url(#clip-Icono_de_biblioteca_6)">
+    <path id="Icon_map-book-store" data-name="Icon map-book-store" d="M46.138,36.352V5.115c0-2.021-2.231-3.675-4.957-3.675H11.437C8.711,1.44,6.48,3.094,6.48,5.115V40.027c0,2.021,2.231,3.675,4.957,3.675H41.181c2.3,0,4.957,0,4.957-1.837v-.919H12.677c-1.363,0-2.479-.827-2.479-1.837V36.352ZM12.677,8.79c0-.505.558-.919,1.239-.919H38.7c.682,0,1.239.413,1.239.919v1.837c0,.505-.558.919-1.239.919H13.916c-.682,0-1.239-.413-1.239-.919Zm0,7.35c0-.505.558-.919,1.239-.919H38.7c.682,0,1.239.413,1.239.919v1.837c0,.505-.558.919-1.239.919H13.916c-.682,0-1.239-.413-1.239-.919Z" transform="translate(-6.48 -1.439)" fill="#fff"/>
+  </g>
+</svg>

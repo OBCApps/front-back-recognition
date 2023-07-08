@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="27" viewBox="0 0 28 27">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_23">
+      <rect width="28" height="27"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_23" data-name="Icono de biblioteca – 23" clip-path="url(#clip-Icono_de_biblioteca_23)">
+    <path id="Icon_material-system-update-alt" data-name="Icon material-system-update-alt" d="M15.353,21.621l5.037-5.037H16.612V5.25H14.093V16.584H10.315ZM26.687,5.25H19.131V7.756h7.556V25.424H4.019V7.756h7.556V5.25H4.019A2.526,2.526,0,0,0,1.5,7.769V25.4a2.526,2.526,0,0,0,2.519,2.519H26.687A2.526,2.526,0,0,0,29.205,25.4V7.769A2.526,2.526,0,0,0,26.687,5.25Z" transform="translate(-1.5 -3.25)" fill="#fff"/>
+  </g>
+</svg>

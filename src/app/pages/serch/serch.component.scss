@@ -1,0 +1,27 @@
+.content {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-color: #F6F7F9;
+    background-image: url("../../../assets/images/fondoLogin.jpg");
+    min-height: 10vh;
+    width: 100vw;
+  
+  }
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    //background-color: rgba(233, 229, 229, 0.1); /* Ajusta el color y la opacidad según tus necesidades */
+    //z-index: 1; /* Asegúrate de que el valor del z-index sea mayor que el del componente para que aparezca por encima */
+  }
+  .color-gray-500 {
+    background-color:#A7B9D1;
+}
+
+
+// Verde
+.bg-49D8AC {
+    background-color: #49D8AC84;
+}

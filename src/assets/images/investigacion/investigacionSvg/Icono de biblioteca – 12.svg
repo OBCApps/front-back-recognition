@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="28" viewBox="0 0 32 28">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_12">
+      <rect width="32" height="28"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_12" data-name="Icono_de_biblioteca___12" clip-path="url(#clip-Icono_de_biblioteca_12)">
+    <g id="Icon_ionic-ios-school" data-name="Icon ionic-ios-school" transform="translate(-2.317 -4.43)">
+      <path id="Path_459" data-name="Path 459" d="M6.813,19.005v6.518a.569.569,0,0,0,.281.492l9.281,5.337a.564.564,0,0,0,.844-.492v-6.6a.569.569,0,0,0-.281-.492L7.657,18.506A.573.573,0,0,0,6.813,19.005Z"/>
+      <path id="Path_460" data-name="Path 460" d="M19.751,31.352l9.288-5.337a.561.561,0,0,0,.281-.492V18.935a.565.565,0,0,0-.844-.492L19.2,23.78a.561.561,0,0,0-.281.492v6.6A.556.556,0,0,0,19.751,31.352Z"/>
+      <path id="Path_461" data-name="Path 461" d="M17.508,4.577,2.6,13.282a.562.562,0,0,0,0,.977l14.906,8.283a1.132,1.132,0,0,0,1.118,0L31.852,14.97c.373-.218.492.056.492.492V26.248c0,.478.274.7.773.7h0a.693.693,0,0,0,.7-.7V14.168a.569.569,0,0,0-.281-.492l-14.913-9.1A1.132,1.132,0,0,0,17.508,4.577Z"/>
+    </g>
+  </g>
+</svg>

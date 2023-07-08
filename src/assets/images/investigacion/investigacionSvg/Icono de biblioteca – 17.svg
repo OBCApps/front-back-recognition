@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="17" viewBox="0 0 22 17">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_17">
+      <rect width="22" height="17"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_17" data-name="Icono_de_biblioteca___17" clip-path="url(#clip-Icono_de_biblioteca_17)">
+    <path id="Icon_material-email" data-name="Icon material-email" d="M22.281,6H5.142A2.139,2.139,0,0,0,3.011,8.142L3,21a2.149,2.149,0,0,0,2.142,2.142H22.281A2.149,2.149,0,0,0,24.423,21V8.142A2.149,2.149,0,0,0,22.281,6Zm0,4.285-8.569,5.356L5.142,10.285V8.142L13.712,13.5l8.569-5.356Z" transform="translate(-3 -6)" fill="#fff"/>
+  </g>
+</svg>

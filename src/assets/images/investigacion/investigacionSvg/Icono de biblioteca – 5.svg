@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="27" viewBox="0 0 24 27">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_5">
+      <rect width="24" height="27"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_5" data-name="Icono_de_biblioteca___5" clip-path="url(#clip-Icono_de_biblioteca_5)">
+    <path id="Icon_material-local-library" data-name="Icon material-local-library" d="M16.25,15.468A17.173,17.173,0,0,0,4.5,10.834V25.2A17.173,17.173,0,0,1,16.25,29.83,17.233,17.233,0,0,1,28,25.2V10.834A17.173,17.173,0,0,0,16.25,15.468Zm0-4.635a3.917,3.917,0,1,0-3.917-3.917A3.912,3.912,0,0,0,16.25,10.834Z" transform="translate(-4.5 -2.83)" fill="#a3a0fb"/>
+  </g>
+</svg>

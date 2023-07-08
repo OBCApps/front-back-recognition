@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="31" height="30" viewBox="0 0 31 30">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_7">
+      <rect width="31" height="30"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_7" data-name="Icono_de_biblioteca___7" clip-path="url(#clip-Icono_de_biblioteca_7)">
+    <g id="Icon_feather-instagram" data-name="Icon feather-instagram" transform="translate(2 3)">
+      <path id="Path_456" data-name="Path 456" d="M9.834,3H23.5c3.774,0,6.834,2.73,6.834,6.1v12.2c0,3.368-3.06,6.1-6.834,6.1H9.834C6.06,27.392,3,24.662,3,21.294V9.1C3,5.73,6.06,3,9.834,3Z" transform="translate(-3 -3)" fill="none" stroke="#233775" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_457" data-name="Path 457" d="M22.209,16.287a5.1,5.1,0,1,1-4.3-4.3,5.1,5.1,0,0,1,4.3,4.3Z" transform="translate(-3.435 -4.89)" fill="none" stroke="#233775" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      <path id="Path_458" data-name="Path 458" d="M26.25,9.75h0" transform="translate(-5.065 -4.262)" fill="none" stroke="#233775" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="29" height="27" viewBox="0 0 29 27">
+  <defs>
+    <clipPath id="clip-Icono_de_biblioteca_10">
+      <rect width="29" height="27"/>
+    </clipPath>
+  </defs>
+  <g id="Icono_de_biblioteca_10" data-name="Icono_de_biblioteca___10" clip-path="url(#clip-Icono_de_biblioteca_10)">
+    <path id="Icon_simple-telegram" data-name="Icon simple-telegram" d="M28.8,5.133,24.449,25.67c-.3,1.457-1.18,1.807-2.409,1.132l-6.625-4.9-3.2,3.1a1.689,1.689,0,0,1-1.325.675c-.867,0-.723-.325-1.012-1.144L7.586,17.07,1.021,15.022c-1.421-.422-1.433-1.4.313-2.108L26.943,3.037c1.168-.518,2.289.289,1.843,2.084Z" transform="translate(0.013 -1.883)" fill="#233775"/>
+  </g>
+</svg>
