@@ -1,4 +1,4 @@
-# Proyecto 3: Base de Datos Multimedia
+# Base de Datos Multimedia
 
 ## Introducción
 
@@ -68,8 +68,8 @@ ng serve --open
 ```  
 
 ## Función de las técnicas
-
-![Flujo de funciones](ruta-a-la-imagen.png)
+### FLUJO GENERAL  
+![Alt text](image-4.png)
 
 ### Vista Web
 #### Vista principal
@@ -91,10 +91,122 @@ ng serve --open
 
 ![Alt text](image-3.png)
 
+### Códigos importantes  
+![Alt text](image-5.png)
+#### Face Recognition (face_reconigtion.py)  
+En ella se encuentra funciones relativas al reconocimiento facial.  Estas funciones permiten extraer y almacenar características de los rostros presentes en imágenes, así como cargar,  procesar y guardar esas características para tareas de reconocimiento facial. 
+
+- Extracción de las características  
+```py
+def characterist_image(imagen_path):
+    imagen = fr.load_image_file(imagen_path)
+    caracteristicas = fr.face_encodings(imagen)
+    if len(caracteristicas) > 0: # Es rostro
+        return caracteristicas[0]    
+    # No hay rostros
+    return None
+```  
+
+- Escritura de los vectores caracteristcos en un archivo para mejorar la busqueda  
+```py
+def save_characteristics(caracteristicas, archivo_salida):
+    
+    with open(archivo_salida, "w") as file:
+        for indice, (nombre_persona, caracteristicas_persona) in enumerate(caracteristicas.items(), start=1):
+            nombre_persona_indice = f"{nombre_persona}_{str(indice).zfill(4)}"
+            print(f"SAve: {nombre_persona_indice }")
+            for caracteristica in caracteristicas_persona:
+                file.write(nombre_persona_indice + ", " + ", ".join(str(x) for x in caracteristica) + "\n")
+
+    print("Vectores característicos guardados en el archivo:", archivo_salida)
+```  
+
+#### Busqueda Knn_secuencial y por Rango (search_R_tree_index.py)  
+En ella se encuentra funciones relativas al reconocimiento facial.  Estas funciones permiten extraer y almacenar características de los rostros presentes en imágenes, así como cargar,  procesar y guardar esas características para tareas de reconocimiento facial. 
+
+- Busqueda Secuencia con cola de Prioridad
+```py
+def knn_secuencial_pq(query, data, k):
+    pq = []
+    
+    for nombre_persona, caracteristicas_persona in data.items():
+        for i, caracteristicas in enumerate(caracteristicas_persona, start=1):  # Índices comienzan desde 1
+            distancia = np.linalg.norm(query - caracteristicas)
+            indice_str = str(i).zfill(4)  # Agregar ceros a la izquierda
+            heapq.heappush(pq, (-distancia, nombre_persona, indice_str))  # Usar distancia negativa para obtener los valores más cercanos
+            
+            if len(pq) > k:
+                heapq.heappop(pq)
+    
+    vecinos_cercanos = [(nombre_persona, indice) for _, nombre_persona, indice in pq]
+    vecinos_cercanos.sort()
+    
+    return vecinos_cercanos
+
+```  
+
+- Busqueda por Rango
+```py
+def knn_secuencial_rango(query, data, radio, k):
+    vecinos_rango = []
+    distancias = []    
+    for nombre_persona, caracteristicas_persona in data.items():
+        for i, caracteristicas in enumerate(caracteristicas_persona, start=1):  # Índices comienzan desde 1
+            distancia = np.linalg.norm(query - caracteristicas)
+            
+            if distancia <= radio:
+                distancias.append(distancia)
+                indice_str = str(i).zfill(4)  # Agregar ceros a la izquierda
+                vecinos_rango.append((nombre_persona, indice_str))
+    
+    vecinos_rango = [vecino for _, vecino in sorted(zip(distancias, vecinos_rango))]
+    vecinos_rango = vecinos_rango[:k]
+    
+    return vecinos_rango
+```  
+
+#### Busqueda Rtree (search_R_tree_index.py)  
+En ella se encuentra funciones relativas al reconocimiento facial.  Estas funciones permiten extraer y almacenar características de los rostros presentes en imágenes, así como cargar,  procesar y guardar esas características para tareas de reconocimiento facial. 
+
+- Creación del indice R-tree
+```py
+def build_rtree_index(data):
+    #print(data)
+    p = index.Property()
+    p.dimension = 128
+    
+    idx = index.Index(properties=p)
+    for name, characteristic in data.items():
+        for i, vector in enumerate(characteristic , start=1):
+            
+            idx.insert(i, tuple(vector) , obj=(name, i))
+    return idx
+```  
+
+- Busqueda Knn en R-tree
+```py
+def buscar_knn_rtree(idx, query, k):
+    resultados = idx.nearest(query, num_results=k, objects=True)
+    k_elementos_cercanos = []
+    
+    for resultado in resultados:
+        name, index_image = resultado.object
+        index_str = str(index_image).zfill(4)  
+        
+        k_elementos_cercanos.append((name, index_str))
+    
+    return k_elementos_cercanos
+```  
+
+
+
 ### Tabla de Comparación de tiempos
 
-![Tabla de Comparación](ruta-a-la-imagen.png)
+Grafica Resultados:  
+![Alt text](image-8.png)
+Tabla resultados:  
+![Alt text](image-9.png)
 
 ## Conclusión
 
-Según los resultados obtenidos en la tabla de comparación de tiempos, se concluye que el algoritmo KNN-RTree es más eficiente en términos de tiempo de ejecución en comparación con el KNN secuencial y el KNN-HighD. Esto demuestra la importancia de utilizar técnicas de indexación espacial para lograr búsquedas eficientes en grandes colecciones de imágenes de rostros. Sin embargo, es importante considerar el efecto de la dimensionalidad en los índices espaciales y explorar soluciones como PCA, KD-Tree, Locality Sensitive Hashing (LSH) o Faiss para mitigar el problema de la maldición de la dimensionalidad en espacios vectoriales de alta dimensión.
+Según los resultados obtenidos en la tabla de comparación de tiempos, se concluye que el algoritmo KNN-RTree es más eficiente en términos de tiempo de ejecución en comparación con el KNN secuencial y el KNN-HighD. Esto demuestra la importancia de utilizar técnicas de indexación espacial para lograr búsquedas eficientes en grandes colecciones de imágenes de rostros. Sin embargo, es importante considerar el efecto de la dimensionalidad en los índices espaciales y explorar soluciones como el PCA implementado para mitigar el problema de la maldición de la dimensionalidad en espacios vectoriales de alta dimensión.
