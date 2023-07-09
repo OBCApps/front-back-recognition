@@ -15,7 +15,7 @@ export class LoginComponent {
   sms_loading : any = "Procesando... ";
   base64Image: string | ArrayBuffer | null = null;
   nombre : any;
-  metod : any;
+  metod : any = '';
   cantidad: any;
   imagen_view : boolean = false;
   constructor(    

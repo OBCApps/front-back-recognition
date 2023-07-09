@@ -24,5 +24,7 @@ export class SearchServiceService {
   KNN__Rtree(data : any) {
     return this.http.post(this.SERVER_WH + '/search-rtree-index-knn', data);
   }
-  
+  KNN__Rtree_hight(data : any) {
+    return this.http.post(this.SERVER_WH + '/search-knn-hight', data);
+  }
 }

@@ -113,6 +113,25 @@ export class SerchComponent {
         }
       )
     }
+    else if (this.metodoBusqueda == "KNN - Rtree - Hight") {
+      const data = {
+        "imagen": this.imagen.split('base64')[1],
+        "cantidad": parseInt(dataLocal.cantidad),
+        "radio" : 5
+      }
+      this.searchServiceService.KNN__Rtree(data).subscribe(
+        (data: any) => {
+          this.isLoading = false;
+          this.resultados = data?.data
+          this.tiempoEjecicion = data?.execution_time
+
+          console.log("BUSQUEDA", this.resultados);
+        }, err => {
+          this.isLoading = false;
+          alert(err)
+        }
+      )
+    }
     
   }
 
