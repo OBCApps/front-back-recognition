@@ -184,6 +184,12 @@ def build_rtree_index(data):
 ```  
 - Implementación PCA
 ```py
+def convert_PCA(vector):
+    vector = tuple(vector)
+    pca = PCA(n_components=2)
+    data_pca = pca.fit_transform(vector)
+    return data_pca
+
 def build_rtree_index_PCA(data):
     #print(data)
     p = index.Property()
