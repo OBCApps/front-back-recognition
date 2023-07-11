@@ -182,6 +182,20 @@ def build_rtree_index(data):
             idx.insert(i, tuple(vector) , obj=(name, i))
     return idx
 ```  
+- Implementación PCA
+```py
+def build_rtree_index_PCA(data):
+    #print(data)
+    p = index.Property()
+    p.dimension = 128
+    
+    idx = index.Index(properties=p)
+    for name, characteristic in data.items():
+        for i, vector in enumerate(characteristic , start=1):
+            data_pca = convert_PCA(vector)
+            idx.insert(i, data_pca , obj=(name, i))
+    return idx
+```
 
 - Busqueda Knn en R-tree
 ```py
