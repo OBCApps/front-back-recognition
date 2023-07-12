@@ -60,7 +60,7 @@ export class SerchComponent {
       const data = {
         "imagen": this.imagen.split('base64')[1],
         "cantidad": parseInt(dataLocal.cantidad),
-        "radio" : 5
+        "radio" : 1
       }
       this.searchServiceService.Search_by_Range(data).subscribe(
         (data: any) => {
