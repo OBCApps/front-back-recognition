@@ -2,7 +2,7 @@
 
 ## Introducción
 
-El logro está enfocado a entender y aplicar los algoritmos de búsqueda y recuperación de la información basado en el contenido [Imágenes].
+El logro está enfocado a entender y aplicar los algoritmos de búsqueda y recuperación de la información basado en el contenido 
 
 Este proyecto está enfocado al uso una estructura multidimensional para dar soporte a las búsqueda y recuperación eficiente de imágenes en un servicio web de reconocimiento facial.
 
@@ -182,6 +182,26 @@ def build_rtree_index(data):
             idx.insert(i, tuple(vector) , obj=(name, i))
     return idx
 ```  
+- Implementación PCA
+```py
+def convert_PCA(vector):
+    vector = tuple(vector)
+    pca = PCA(n_components=2)
+    data_pca = pca.fit_transform(vector)
+    return data_pca
+
+def build_rtree_index_PCA(data):
+    #print(data)
+    p = index.Property()
+    p.dimension = 128
+    
+    idx = index.Index(properties=p)
+    for name, characteristic in data.items():
+        for i, vector in enumerate(characteristic , start=1):
+            data_pca = convert_PCA(vector)
+            idx.insert(i, data_pca , obj=(name, i))
+    return idx
+```
 
 - Busqueda Knn en R-tree
 ```py
@@ -209,4 +229,4 @@ Tabla resultados:
 
 ## Conclusión
 
-Según los resultados obtenidos en la tabla de comparación de tiempos, se concluye que el algoritmo KNN-RTree es más eficiente en términos de tiempo de ejecución en comparación con el KNN secuencial y el KNN-HighD. Esto demuestra la importancia de utilizar técnicas de indexación espacial para lograr búsquedas eficientes en grandes colecciones de imágenes de rostros. Sin embargo, es importante considerar el efecto de la dimensionalidad en los índices espaciales y explorar soluciones como el PCA implementado para mitigar el problema de la maldición de la dimensionalidad en espacios vectoriales de alta dimensión.
+Según los resultados obtenidos en la tabla de comparación de tiempos, se concluye que el algoritmo KNN-RTree-Hight es más eficiente en términos de tiempo de ejecución en comparación con el KNN secuencial y el KNN-Rtree. Esto demuestra la importancia de utilizar técnicas de indexación espacial para lograr búsquedas eficientes en grandes colecciones de imágenes de rostros. Sin embargo, es importante considerar el efecto de la dimensionalidad en los índices espaciales y explorar soluciones como el PCA implementado para mitigar el problema de la maldición de la dimensionalidad en espacios vectoriales de alta dimensión.
